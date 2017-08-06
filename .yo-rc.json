@@ -1,0 +1,23 @@
+{
+  "generator-kittn": {
+    "promptValues": {
+      "projectcredential": true,
+      "fileUser": "niels",
+      "fileGroup": "staff",
+      "credentialdbserver": "localhost",
+      "credentialdbuser": "root",
+      "credentialdbpass": "paula",
+      "projectcssfilename": "style",
+      "projectbreakpointunit": "em",
+      "projectthemecolor": "#ef7d00",
+      "projectstylelint": true,
+      "projectjquery": false,
+      "projectjsframework": false,
+      "projectastrum": false,
+      "projectsassdocs": false,
+      "projectversion": "0.0.1",
+      "projectmail": "niels@niels-nuebel.de",
+      "projecturl": "https://www.niels-nuebel.de"
+    }
+  }
+}

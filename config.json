@@ -1,0 +1,203 @@
+{
+  "dist": {
+    "cssimgRoot": "/assets/img/",
+    "dist": "dist/",
+    "base": "dist/public/",
+    "markup": "dist/craft/",
+    "templates": "dist/craft/templates",
+    "assets": "dist/public/assets/",
+    "browserSyncDir": "dist/public/",
+    "css": "dist/public/assets/css/",
+    "js": "dist/public/assets/js/",
+    "fonts": "dist/public/assets/fonts/",
+    "cssimg": "dist/public/assets/img/",
+    "bitmaps": "dist/public/assets/img/bitmaps/",
+    "vectors": "dist/public/assets/img/svgfiles/",
+    "contentimage": "dist/public/images/",
+    "webpackjsassets": "assets/",
+    "webpackpublic": "dist/public/"
+  },
+  "templatePath": {
+    "root": "./",
+    "css": "assets/css/",
+    "js": "assets/js/",
+    "fonts": "assets/fonts/",
+    "cssimage": "assets/img/",
+    "contentimage": "images/"
+  },
+  "css": {
+    "spacer": "20px",
+    "baseFontSize": "16px"
+  },
+  "template": {
+    "globalTitle": "dreiwerft",
+    "compiler": false
+  },
+  "browsersync": {
+    "openbrowser": true,
+    "https": false,
+    "proxy": "http://dreiwerft.local"
+  },
+  "files": {
+    "jsCopy": [
+      "node_modules/lazysizes/plugins/respimg/ls.respimg.js"
+    ],
+    "jsCombine": {
+      "files": [],
+      "filename": "scripts.js"
+    },
+    "fonts": [
+      "src/fonts/**"
+    ],
+    "launch": [
+      {
+        "src": "favicons/**",
+        "dest": "assets/img/system/"
+      },
+      {
+        "src": "facebook-og-image.jpg",
+        "dest": "assets/img/system/"
+      },
+      {
+        "src": "twitter-og-image.jpg",
+        "dest": "assets/img/system/"
+      }
+    ]
+  },
+  "modernizr": {
+    "options": [
+      "setClasses",
+      "addTest",
+      "testAllProps",
+      "fnBind"
+    ],
+    "tests": [
+      "flexbox",
+      "touch",
+      "inlinesvg",
+      "webgl",
+      "picture"
+    ]
+  },
+  "minify": {
+    "images": {
+      "optimizationLevel": 3,
+      "pngquant": {
+        "quality": "75-88",
+        "speed": 4
+      },
+      "svgoPlugins": [
+        {
+          "cleanupIDs": false
+        },
+        {
+          "removeComments": true
+        },
+        {
+          "removeViewBox": false
+        },
+        {
+          "removeDesc": true
+        },
+        {
+          "removeUselessDefs": false
+        },
+        {
+          "removeDoctype": true
+        },
+        {
+          "removeEmptyText": true
+        },
+        {
+          "removeUnknownsAndDefaults": true
+        },
+        {
+          "removeEmptyContainers": true
+        },
+        {
+          "collapseGroups": true
+        },
+        {
+          "removeUselessStrokeAndFill": true
+        },
+        {
+          "convertStyleToAttrs": true
+        }
+      ],
+      "progressive": true,
+      "interlaced": true
+    },
+    "javascript": {
+      "options": {
+        "mangle": false
+      }
+    }
+  },
+  "src": {
+    "baseconf": {
+      "type": "craftCB",
+      "methodology": "sassITCSS",
+      "structure": "uncompiled"
+    },
+    "style": "src/style/",
+    "template": "src/template/",
+    "js": "src/js/",
+    "bower": "src/bower/",
+    "scripts": "src/scripts",
+    "structure": "src/structure/",
+    "fonts": "src/fonts/",
+    "images": {
+      "bitmapSprite": {
+        "files": "src/images/bitmapSprite-assets/",
+        "name": "sprite.png"
+      },
+      "vectorSprite": {
+        "files": "src/images/vectorSprite-assets/",
+        "name": "vector-sprite.svg",
+        "symbolName": "symbol-sprite.svg",
+        "maxHeight": 30,
+        "maxWidth": 30,
+        "padding": 0
+      },
+      "bitmaps": "src/images/bitmapSingle-assets/",
+      "vectors": "src/images/vectorSingle-assets/"
+    },
+    "contentimage": "src/images/htmlimages/",
+    "system": "src/.system/",
+    "plugins": "src/craftplugins/",
+    "templates": "src/structure/templates/"
+  },
+  "cssabove": {
+    "width": "1200",
+    "height": "1024",
+    "minify": true,
+    "inline": false,
+    "url": "http://dreiwerft.local",
+    "cssfile": "style.css",
+    "include": [
+      ".plj",
+      ".c-progressLoader"
+    ],
+    "ignore": [
+      "font-face"
+    ],
+    "sites": [
+      {
+        "url": "",
+        "template": "index"
+      },
+      {
+        "url": "/blog/hello-world",
+        "template": "general/entry"
+      },
+      {
+        "url": "/blog",
+        "template": "general/index"
+      },
+      {
+        "url": "/404",
+        "template": "404"
+      }
+    ]
+  }
+}

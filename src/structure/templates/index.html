@@ -1,0 +1,49 @@
+{#
+ # Homepage template
+ # ---------------
+ #}
+
+{# Subtemplate Setup #}
+{% set _t = {
+  isHome: true,
+  sectionChannel: 'blog',
+  bodyclass: 'home',
+  limit: 10,
+  templatename: 'index'
+} %}
+
+{% extends '_layout/main-layout.html' %}
+
+{% block content %}
+  {% cache globally using key 'home' ~ craft.request.path ~ (craft.request.getPageNum ? '/p' ~ craft.request.getPageNum : '') %}
+
+  {# Include Hero Image #}
+  {% include '_components/hero.html' with { data: entry }  %}
+
+    <div class="o-area__container">
+
+      {# Include Featured Image #}
+      {% include '_components/featuredImage.html' with { data: entry } %}
+
+      {# Add Content Builder #}
+      {% include '_builder/content-builder.html' %}
+
+      {# Add individual page parts based on the respective entry name #}
+      {% set entries = craft.entries({
+        section: _t.sectionChannel ~ 'Channel',
+        sort: 'postDate',
+        relatedTo: (category is defined ? category : false),
+        limit: _t.limit
+      }) %}
+
+      {# Initiate the Pagination #}
+      {% paginate entries as pageInfo, pageEntries %}
+
+        {# Loop through entries #}
+        {% include '_components/articleBoxes.html' with { data: pageEntries, type: _t.sectionChannel } %}
+
+      {# Include Pagination #}
+      {{ _.pagination(pageInfo,craft) }}
+    </div>
+  {% endcache %}
+{% endblock %}
