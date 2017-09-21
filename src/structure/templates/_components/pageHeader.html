@@ -9,7 +9,7 @@
   {% cache %}
   <div class="{{ c ~ '__inner' }}">
     <div class="{{ c ~ '__logo' }} {{ c ~ '__block' }}">
-      {% include '_components/pagelogo.html' with { name: '' } %}
+      {% include '_components/pagelogo.html' with { name: '', data: main.objMediaImage } %}
     </div>
     <div class="{{ c ~ '__nav' }} {{ c ~ '__block' }}">
       {{ _.siteNavigation('c-mainnav', 'mainnav') }}
