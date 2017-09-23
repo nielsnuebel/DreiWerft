@@ -20,4 +20,4 @@ lazySizesConfig.expFactor = 1.3
 lazySizes.init()
 
 // Activate Container Queries
-cq({ postcss: true })
+cq({postcss: true})

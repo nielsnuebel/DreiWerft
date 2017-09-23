@@ -43,8 +43,8 @@
   &__inner {
     @extend %e-container;
     position: relative;
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
     min-height: api(height, mobile);
 
     @include break(api(breaksizes, one)) {

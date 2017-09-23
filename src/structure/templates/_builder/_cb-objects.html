@@ -164,6 +164,13 @@
       name: ''
     } %}
 
+  {# Richtext Module #}
+  {% case 'objTyped' %}
+    {% include '_components/typed' with {
+      data: data.objTyped,
+      options: data.setTyped
+	} %}
+
 {% endswitch %}
 
 

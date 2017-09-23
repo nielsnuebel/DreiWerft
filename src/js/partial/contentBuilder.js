@@ -9,6 +9,7 @@ import './hasScrollbars'
 import './init-heighttransition'
 import './init-autoscroll'
 import './flickity-package'
+import './typedjs'
 // import './searchbar'
 
 // Init Photoswipe

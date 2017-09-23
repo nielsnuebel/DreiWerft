@@ -1,0 +1,17 @@
+{#
+  Typed.js
+  ========
+  Simple Typed.js Module
+
+  @param {string} data                   = Text
+  @param {object} options                = Optionsobject
+  @param {string} options.style          = Optional Styleclass
+#}
+
+{# Class Overwrite #}
+{% set c = name is defined and name != '' ? name : 'c-typed' %}
+
+{# Build Element Block #}
+<div class="{{ c }}{{ options.style != 'default' ? ' ' ~ c ~ '--s-' ~ options.style }}">
+	<span class="{{ c }}__desc">{{ data.desc|nl2br }}</span><span class="{{ c }}__word" data-words="{{ data.typed }}" data-speed="{{ options.speed }}"></span>
+</div>
