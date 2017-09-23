@@ -36,8 +36,7 @@
     "photoswipe": "^4.1.1",
     "pyrsmk-toast": "^2.1.1",
     "svgxuse": "^1.2.1",
-    "transition-to-from-auto": "^0.5.2",
-    "typed.js": "^2.0.5"
+    "transition-to-from-auto": "^0.5.2"
   },
   "devDependencies": {
     "ansi-html": "^0.0.7",
