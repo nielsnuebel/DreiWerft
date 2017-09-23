@@ -21,6 +21,15 @@
   {# Deactivate Progress Load on Livepreview #}
   {% if craft.request.isLivePreview != true and craft.config.environment == 'productive' %}
     <script>document.getElementsByTagName('html')[0].classList.add('plj')</script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104198499-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+
+        gtag('config', 'UA-104198499-1', { 'anonymize_ip': true });
+    </script>
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
