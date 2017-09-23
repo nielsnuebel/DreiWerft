@@ -10,7 +10,7 @@ import Typed from 'typed.js' // eslint-disable-line
     const typedWords = Array.from(document.querySelectorAll('.c-typed__word'))
     if (typedWords) {
       typedWords.forEach((typedWord) => {
-        new Typed(typedWord, {
+          const ty = new Typed(typedWord, {
           strings: typedWord.getAttribute('data-words').split(','),
           typeSpeed: parseInt(typedWord.getAttribute('data-speed')),
           loop: true
